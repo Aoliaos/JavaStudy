@@ -1,0 +1,16 @@
+Github提交方法
+1.创建本地git。
+命令行输入git init 将当前文件夹变成Git可管理的仓库
+2.添加缓存区和提交
+使用命令 git add . 将当前文件夹所有文件添加到缓存区，通过git status命令，查看下缓存区的状态
+用提交命令git commit -m "这里面写你的注释"  把文件提交的本地仓库
+3.生成秘钥
+使用命令.ssh-keygen -t rsa -C "bjwangjidong@163.com"  （Github邮箱地址）生成的秘钥文件在C盘用户目录的.ssh文件夹中
+4.登录Github，用户头像--》settings--》SSH and GPG keys，将id_rsa.pub文件code复制到相应位置
+5.创建连接
+git remote add origin git@github.com:Aoliaos/HTMLstudy
+说明：Aoliaos/HTMLstudy为用户名/项目名
+6.推送
+空仓库使用：git push -u origin master    （目标文件夹Aoliaos/HTMLstudy为空，要加上-u这个参数）
+费空仓库使用：git pull --rebase origin master  将内容合并
+推送：git push origin master   （以后提交直接用该命令即可）
